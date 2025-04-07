@@ -29,7 +29,7 @@ with open('model1/Rental_prediction_model.pkl', 'wb') as file:
 
 
 def predict_price(rooms, area):
-    with open('model/Rental_prediction_model.pkl', 'rb') as file:
+    with open('model1/Rental_prediction_model.pkl', 'rb') as file:
         model = pickle.load(file)
 
     prediction = model.predict([[rooms, area]])
