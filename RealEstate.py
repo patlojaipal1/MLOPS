@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import pickle
 
-df = pd.read_csv("rental_1000.csv")
+df = pd.read_csv("data/rental_1000.csv")
 
 X = df[['rooms', 'area']].values
 y = df['price'].values
@@ -24,7 +24,7 @@ print(f"RMSE : {rmse}")
 
 #Save the model
 
-with open('model/Rental_prediction_model.pkl', 'wb') as file:
+with open('model1/Rental_prediction_model.pkl', 'wb') as file:
     pickle.dump(model, file)
 
 
